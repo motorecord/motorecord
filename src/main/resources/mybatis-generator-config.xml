@@ -2,18 +2,30 @@
         "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <context id="simple" targetRuntime="MyBatis3Simple">
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost/motorecord"
+    <context id="motorecord" targetRuntime="MyBatis3Simple">
+
+        <commentGenerator>
+            <!-- 是否不生成注释 -->
+            <property name="suppressAllComments" value="false"/>
+            <!-- 添加 db 表中字段的注释，只有suppressAllComments为false时才生效-->
+            <property name="addRemarkComments" value="true"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost/motorecord?serverTimezone=UTC"
                         userId="motorecord" password="motorecord">
-            <property name="nullCatalogMeansCurrent" value="true" />
+            <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
 
-        <javaModelGenerator targetPackage="example.model" targetProject="src/main/java"/>
+        <javaModelGenerator targetPackage="io.zbc.motorecord.model" targetProject="src/main/java"/>
 
-        <sqlMapGenerator targetPackage="example.mapper" targetProject="src/main/resources"/>
+        <sqlMapGenerator targetPackage="mapper" targetProject="src/main/resources"/>
 
-        <javaClientGenerator type="XMLMAPPER" targetPackage="example.mapper" targetProject="src/main/java"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="io.zbc.motorecord.mapper" targetProject="src/main/java"/>
 
-        <table tableName="FooTable" />
+        <table tableName="motorcycle"/>
+        <table tableName="motorecord"/>
+        <table tableName="owner"/>
+        <table tableName="user"/>
     </context>
 </generatorConfiguration>
