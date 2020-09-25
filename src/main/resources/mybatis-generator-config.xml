@@ -2,20 +2,34 @@
         "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <context id="motorecord" targetRuntime="MyBatis3Simple">
+    <!-- 引入配置文件 -->
+    <properties resource="mybatis-generator-jdbc.properties"/>
 
-        <commentGenerator>
+    <context id="motorecord" targetRuntime="MyBatis3Simple">
+        <!-- 指定生成的java文件的编码,没有直接生成到项目时中文可能会乱码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+        <!-- 这里的type里写的是你的实现类的类全路径 -->
+        <commentGenerator type="io.zbc.motorecord.mybatis.generator.MotorecordCommentGenerator">
             <!-- 是否不生成注释 -->
             <property name="suppressAllComments" value="false"/>
             <!-- 添加 db 表中字段的注释，只有suppressAllComments为false时才生效-->
             <property name="addRemarkComments" value="true"/>
         </commentGenerator>
 
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://localhost/motorecord?serverTimezone=UTC"
-                        userId="motorecord" password="motorecord">
+        <jdbcConnection driverClass="${spring.datasource.driver-class-name}"
+                        connectionURL="${spring.datasource.url}"
+                        userId="${spring.datasource.name}"
+                        password="${spring.datasource.password}">
+            <!-- 如果使用了Connector/J 8.x的版本，如下配置可以不生成系统表的映射 -->
             <property name="nullCatalogMeansCurrent" value="true"/>
         </jdbcConnection>
+        <!-- 类型转换 -->
+        <javaTypeResolver>
+            <!-- 是否使用bigDecimal -->
+            <property name="forceBigDecimals" value="true"/>
+            <!-- 使用Java8的LocalDate等日期格式解析 -->
+            <property name="useJSR310Types" value="true"/>
+        </javaTypeResolver>
 
         <javaModelGenerator targetPackage="io.zbc.motorecord.model" targetProject="src/main/java"/>
 
