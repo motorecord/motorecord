@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.zbc.motorecord.mapper.MotorcycleMapper">
+  <resultMap id="BaseResultMap" type="io.zbc.motorecord.model.Motorcycle">
+    <id column="motor_id" jdbcType="INTEGER" property="motorId" />
+    <result column="motor_alias" jdbcType="VARCHAR" property="motorAlias" />
+    <result column="motor_name" jdbcType="VARCHAR" property="motorName" />
+    <result column="brand" jdbcType="VARCHAR" property="brand" />
+    <result column="displacement" jdbcType="INTEGER" property="displacement" />
+    <result column="enroll_date" jdbcType="DATE" property="enrollDate" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from motorcycle
+    where motor_id = #{motorId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="io.zbc.motorecord.model.Motorcycle">
+    insert into motorcycle (motor_id, motor_alias, motor_name, 
+      brand, displacement, enroll_date, 
+      insert_time, update_time)
+    values (#{motorId,jdbcType=INTEGER}, #{motorAlias,jdbcType=VARCHAR}, #{motorName,jdbcType=VARCHAR}, 
+      #{brand,jdbcType=VARCHAR}, #{displacement,jdbcType=INTEGER}, #{enrollDate,jdbcType=DATE}, 
+      #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="io.zbc.motorecord.model.Motorcycle">
+    update motorcycle
+    set motor_alias = #{motorAlias,jdbcType=VARCHAR},
+      motor_name = #{motorName,jdbcType=VARCHAR},
+      brand = #{brand,jdbcType=VARCHAR},
+      displacement = #{displacement,jdbcType=INTEGER},
+      enroll_date = #{enrollDate,jdbcType=DATE},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where motor_id = #{motorId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select motor_id, motor_alias, motor_name, brand, displacement, enroll_date, insert_time, 
+    update_time
+    from motorcycle
+    where motor_id = #{motorId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select motor_id, motor_alias, motor_name, brand, displacement, enroll_date, insert_time, 
+    update_time
+    from motorcycle
+  </select>
+  <resultMap id="BaseResultMap" type="io.zbc.motorecord.model.Motorcycle">
+    <id column="motor_id" jdbcType="INTEGER" property="motorId" />
+    <result column="motor_alias" jdbcType="VARCHAR" property="motorAlias" />
+    <result column="motor_name" jdbcType="VARCHAR" property="motorName" />
+    <result column="brand" jdbcType="VARCHAR" property="brand" />
+    <result column="displacement" jdbcType="INTEGER" property="displacement" />
+    <result column="enroll_date" jdbcType="DATE" property="enrollDate" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from motorcycle
+    where motor_id = #{motorId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="io.zbc.motorecord.model.Motorcycle">
+    insert into motorcycle (motor_id, motor_alias, motor_name, 
+      brand, displacement, enroll_date, 
+      insert_time, update_time)
+    values (#{motorId,jdbcType=INTEGER}, #{motorAlias,jdbcType=VARCHAR}, #{motorName,jdbcType=VARCHAR}, 
+      #{brand,jdbcType=VARCHAR}, #{displacement,jdbcType=INTEGER}, #{enrollDate,jdbcType=DATE}, 
+      #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="io.zbc.motorecord.model.Motorcycle">
+    update motorcycle
+    set motor_alias = #{motorAlias,jdbcType=VARCHAR},
+      motor_name = #{motorName,jdbcType=VARCHAR},
+      brand = #{brand,jdbcType=VARCHAR},
+      displacement = #{displacement,jdbcType=INTEGER},
+      enroll_date = #{enrollDate,jdbcType=DATE},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where motor_id = #{motorId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select motor_id, motor_alias, motor_name, brand, displacement, enroll_date, insert_time, 
+    update_time
+    from motorcycle
+    where motor_id = #{motorId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select motor_id, motor_alias, motor_name, brand, displacement, enroll_date, insert_time, 
+    update_time
+    from motorcycle
+  </select>
+  <resultMap id="BaseResultMap" type="io.zbc.motorecord.model.Motorcycle">
+    <id column="motor_id" jdbcType="INTEGER" property="motorId" />
+    <result column="motor_alias" jdbcType="VARCHAR" property="motorAlias" />
+    <result column="motor_name" jdbcType="VARCHAR" property="motorName" />
+    <result column="brand" jdbcType="VARCHAR" property="brand" />
+    <result column="displacement" jdbcType="INTEGER" property="displacement" />
+    <result column="enroll_date" jdbcType="DATE" property="enrollDate" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from motorcycle
+    where motor_id = #{motorId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="io.zbc.motorecord.model.Motorcycle">
+    insert into motorcycle (motor_id, motor_alias, motor_name, 
+      brand, displacement, enroll_date, 
+      insert_time, update_time)
+    values (#{motorId,jdbcType=INTEGER}, #{motorAlias,jdbcType=VARCHAR}, #{motorName,jdbcType=VARCHAR}, 
+      #{brand,jdbcType=VARCHAR}, #{displacement,jdbcType=INTEGER}, #{enrollDate,jdbcType=DATE}, 
+      #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP})
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="io.zbc.motorecord.model.Motorcycle">
+    update motorcycle
+    set motor_alias = #{motorAlias,jdbcType=VARCHAR},
+      motor_name = #{motorName,jdbcType=VARCHAR},
+      brand = #{brand,jdbcType=VARCHAR},
+      displacement = #{displacement,jdbcType=INTEGER},
+      enroll_date = #{enrollDate,jdbcType=DATE},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where motor_id = #{motorId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select motor_id, motor_alias, motor_name, brand, displacement, enroll_date, insert_time, 
+    update_time
+    from motorcycle
+    where motor_id = #{motorId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select motor_id, motor_alias, motor_name, brand, displacement, enroll_date, insert_time, 
+    update_time
+    from motorcycle
+  </select>
+</mapper>

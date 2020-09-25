@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="io.zbc.motorecord.mapper.MotorecordMapper">
+  <resultMap id="BaseResultMap" type="io.zbc.motorecord.model.Motorecord">
+    <id column="record_id" jdbcType="INTEGER" property="recordId" />
+    <result column="record_cost" jdbcType="DECIMAL" property="recordCost" />
+    <result column="record_type" jdbcType="VARCHAR" property="recordType" />
+    <result column="record_time" jdbcType="TIMESTAMP" property="recordTime" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="motor_id" jdbcType="INTEGER" property="motorId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from motorecord
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="io.zbc.motorecord.model.Motorecord">
+    insert into motorecord (record_id, record_cost, record_type, 
+      record_time, remark, motor_id, 
+      user_id, insert_time, update_time
+      )
+    values (#{recordId,jdbcType=INTEGER}, #{recordCost,jdbcType=DECIMAL}, #{recordType,jdbcType=VARCHAR}, 
+      #{recordTime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR}, #{motorId,jdbcType=INTEGER}, 
+      #{userId,jdbcType=INTEGER}, #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="io.zbc.motorecord.model.Motorecord">
+    update motorecord
+    set record_cost = #{recordCost,jdbcType=DECIMAL},
+      record_type = #{recordType,jdbcType=VARCHAR},
+      record_time = #{recordTime,jdbcType=TIMESTAMP},
+      remark = #{remark,jdbcType=VARCHAR},
+      motor_id = #{motorId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select record_id, record_cost, record_type, record_time, remark, motor_id, user_id, 
+    insert_time, update_time
+    from motorecord
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select record_id, record_cost, record_type, record_time, remark, motor_id, user_id, 
+    insert_time, update_time
+    from motorecord
+  </select>
+  <resultMap id="BaseResultMap" type="io.zbc.motorecord.model.Motorecord">
+    <id column="record_id" jdbcType="INTEGER" property="recordId" />
+    <result column="record_cost" jdbcType="DECIMAL" property="recordCost" />
+    <result column="record_type" jdbcType="VARCHAR" property="recordType" />
+    <result column="record_time" jdbcType="TIMESTAMP" property="recordTime" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="motor_id" jdbcType="INTEGER" property="motorId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from motorecord
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="io.zbc.motorecord.model.Motorecord">
+    insert into motorecord (record_id, record_cost, record_type, 
+      record_time, remark, motor_id, 
+      user_id, insert_time, update_time
+      )
+    values (#{recordId,jdbcType=INTEGER}, #{recordCost,jdbcType=DECIMAL}, #{recordType,jdbcType=VARCHAR}, 
+      #{recordTime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR}, #{motorId,jdbcType=INTEGER}, 
+      #{userId,jdbcType=INTEGER}, #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="io.zbc.motorecord.model.Motorecord">
+    update motorecord
+    set record_cost = #{recordCost,jdbcType=DECIMAL},
+      record_type = #{recordType,jdbcType=VARCHAR},
+      record_time = #{recordTime,jdbcType=TIMESTAMP},
+      remark = #{remark,jdbcType=VARCHAR},
+      motor_id = #{motorId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select record_id, record_cost, record_type, record_time, remark, motor_id, user_id, 
+    insert_time, update_time
+    from motorecord
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select record_id, record_cost, record_type, record_time, remark, motor_id, user_id, 
+    insert_time, update_time
+    from motorecord
+  </select>
+  <resultMap id="BaseResultMap" type="io.zbc.motorecord.model.Motorecord">
+    <id column="record_id" jdbcType="INTEGER" property="recordId" />
+    <result column="record_cost" jdbcType="DECIMAL" property="recordCost" />
+    <result column="record_type" jdbcType="VARCHAR" property="recordType" />
+    <result column="record_time" jdbcType="TIMESTAMP" property="recordTime" />
+    <result column="remark" jdbcType="VARCHAR" property="remark" />
+    <result column="motor_id" jdbcType="INTEGER" property="motorId" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="insert_time" jdbcType="TIMESTAMP" property="insertTime" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+  </resultMap>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from motorecord
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="io.zbc.motorecord.model.Motorecord">
+    insert into motorecord (record_id, record_cost, record_type, 
+      record_time, remark, motor_id, 
+      user_id, insert_time, update_time
+      )
+    values (#{recordId,jdbcType=INTEGER}, #{recordCost,jdbcType=DECIMAL}, #{recordType,jdbcType=VARCHAR}, 
+      #{recordTime,jdbcType=TIMESTAMP}, #{remark,jdbcType=VARCHAR}, #{motorId,jdbcType=INTEGER}, 
+      #{userId,jdbcType=INTEGER}, #{insertTime,jdbcType=TIMESTAMP}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <update id="updateByPrimaryKey" parameterType="io.zbc.motorecord.model.Motorecord">
+    update motorecord
+    set record_cost = #{recordCost,jdbcType=DECIMAL},
+      record_type = #{recordType,jdbcType=VARCHAR},
+      record_time = #{recordTime,jdbcType=TIMESTAMP},
+      remark = #{remark,jdbcType=VARCHAR},
+      motor_id = #{motorId,jdbcType=INTEGER},
+      user_id = #{userId,jdbcType=INTEGER},
+      insert_time = #{insertTime,jdbcType=TIMESTAMP},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </update>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select record_id, record_cost, record_type, record_time, remark, motor_id, user_id, 
+    insert_time, update_time
+    from motorecord
+    where record_id = #{recordId,jdbcType=INTEGER}
+  </select>
+  <select id="selectAll" resultMap="BaseResultMap">
+    select record_id, record_cost, record_type, record_time, remark, motor_id, user_id, 
+    insert_time, update_time
+    from motorecord
+  </select>
+</mapper>

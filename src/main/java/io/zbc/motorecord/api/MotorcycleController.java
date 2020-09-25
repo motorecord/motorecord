@@ -1,5 +1,6 @@
 package io.zbc.motorecord.api;
 
+import io.zbc.motorecord.model.Motorcycle;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
