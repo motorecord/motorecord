@@ -17,6 +17,6 @@ public interface MotorcycleMapper {
 
     int updateByPrimaryKey(Motorcycle record);
 
-    List<Motorcycle> selectByOwner(List<Owner> owners);
+    List<Motorcycle> selectByOwner(@Param("owners") List<Owner> owners);
 
 }

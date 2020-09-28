@@ -45,12 +45,12 @@
     update_time
     from motorcycle
   </select>
-  <select id="selectByOwner" parameterType="list" resultMap="BaseResultMap">
+  <select id="selectByOwner" parameterType="java.util.List" resultMap="BaseResultMap">
     select motor_id, motor_alias, motor_name, brand, displacement, enroll_date, insert_time,
     update_time
     from motorcycle
     where motor_id in
-    <foreach item="owner" collection="list" separator="," open="(" close=")" index="">
+    <foreach item="owner" collection="owners" separator="," open="(" close=")" index="">
       #{owner.motorId, jdbcType=INTEGER}
     </foreach>
   </select>
