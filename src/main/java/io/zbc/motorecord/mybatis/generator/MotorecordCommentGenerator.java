@@ -225,9 +225,10 @@ public class MotorecordCommentGenerator implements CommentGenerator {
         if (suppressAllComments) {
             return;
         }
-        method.addJavaDocLine("/**");
-        addJavadocTag(method, false);
-        method.addJavaDocLine(" */");
+        // XXXMapper.java中不添加注释
+//        method.addJavaDocLine("/**");
+//        addJavadocTag(method, false);
+//        method.addJavaDocLine(" */");
     }
 
 
@@ -239,18 +240,18 @@ public class MotorecordCommentGenerator implements CommentGenerator {
         if (suppressAllComments) {
             return;
         }
-        method.addJavaDocLine("/**");
-        StringBuilder sb = new StringBuilder();
-        sb.append(" * ");
-        sb.append(introspectedColumn.getRemarks());
-        method.addJavaDocLine(sb.toString().replace("\n", " "));
-        sb.setLength(0);
-        sb.append(" * @return ");
-        sb.append(introspectedColumn.getActualColumnName());
-        sb.append(" ");
-        sb.append(introspectedColumn.getRemarks());
-        method.addJavaDocLine(sb.toString().replace("\n", " "));
-        method.addJavaDocLine(" */");
+//        method.addJavaDocLine("/**");
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(" * ");
+//        sb.append(introspectedColumn.getRemarks());
+//        method.addJavaDocLine(sb.toString().replace("\n", " "));
+//        sb.setLength(0);
+//        sb.append(" * @return ");
+//        sb.append(introspectedColumn.getActualColumnName());
+//        sb.append(" ");
+//        sb.append(introspectedColumn.getRemarks());
+//        method.addJavaDocLine(sb.toString().replace("\n", " "));
+//        method.addJavaDocLine(" */");
     }
 
     /**
@@ -258,13 +259,13 @@ public class MotorecordCommentGenerator implements CommentGenerator {
      */
     @Override
     public void addJavaFileComment(CompilationUnit compilationUnit) {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        compilationUnit.addFileCommentLine("/*");
-        compilationUnit.addFileCommentLine("*");
-        compilationUnit.addFileCommentLine("* " + compilationUnit.getType().getShortName() + ".java");
-        compilationUnit.addFileCommentLine("* Copyright(C) 2017-2020 fendo公司");
-        compilationUnit.addFileCommentLine("* @date " + sdf.format(new Date()) + "");
-        compilationUnit.addFileCommentLine("*/");
+//        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+//        compilationUnit.addFileCommentLine("/*");
+//        compilationUnit.addFileCommentLine("*");
+//        compilationUnit.addFileCommentLine("* " + compilationUnit.getType().getShortName() + ".java");
+//        compilationUnit.addFileCommentLine("* Copyright(C) 2017-2020 fendo公司");
+//        compilationUnit.addFileCommentLine("* @date " + sdf.format(new Date()) + "");
+//        compilationUnit.addFileCommentLine("*/");
     }
 
     /**
@@ -317,19 +318,19 @@ public class MotorecordCommentGenerator implements CommentGenerator {
         if (suppressAllComments) {
             return;
         }
-        method.addJavaDocLine("/**");
-        StringBuilder sb = new StringBuilder();
-        sb.append(" * ");
-        sb.append(introspectedColumn.getRemarks());
-        method.addJavaDocLine(sb.toString().replace("\n", " "));
-        Parameter parm = method.getParameters().get(0);
-        sb.setLength(0);
-        sb.append(" * @param ");
-        sb.append(parm.getName());
-        sb.append(" ");
-        sb.append(introspectedColumn.getRemarks());
-        method.addJavaDocLine(sb.toString().replace("\n", " "));
-        method.addJavaDocLine(" */");
+//        method.addJavaDocLine("/**");
+//        StringBuilder sb = new StringBuilder();
+//        sb.append(" * ");
+//        sb.append(introspectedColumn.getRemarks());
+//        method.addJavaDocLine(sb.toString().replace("\n", " "));
+//        Parameter parm = method.getParameters().get(0);
+//        sb.setLength(0);
+//        sb.append(" * @param ");
+//        sb.append(parm.getName());
+//        sb.append(" ");
+//        sb.append(introspectedColumn.getRemarks());
+//        method.addJavaDocLine(sb.toString().replace("\n", " "));
+//        method.addJavaDocLine(" */");
     }
 
 }
