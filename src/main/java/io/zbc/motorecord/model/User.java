@@ -14,6 +14,11 @@ public class User {
     private String userName;
 
     /**
+     * 昵称
+     */
+    private String nickname;
+
+    /**
      * 密码
      */
     private String password;
@@ -52,6 +57,14 @@ public class User {
 
     public void setUserName(String userName) {
         this.userName = userName;
+    }
+
+    public String getNickname() {
+        return nickname;
+    }
+
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     public String getPassword() {
