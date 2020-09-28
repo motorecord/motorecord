@@ -1,18 +1,22 @@
 package io.zbc.motorecord.api;
 
 import io.zbc.motorecord.model.Motorcycle;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import io.zbc.motorecord.service.MotorcycleService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
-@RequestMapping(value = "/motorcycle")
+@RequestMapping(value = "/motorecord/motorcycle")
 public class MotorcycleController {
 
-    @RequestMapping(value = "/findMyMotorcycle")
-    public String findMyMotorcycle(@RequestBody String userId) {
+    @Autowired
+    private MotorcycleService motorcycleService;
 
-        return null;
+    @RequestMapping(value = "/findMyMotorcycle", method = RequestMethod.POST)
+    public List<Motorcycle> findMyMotorcycle(@RequestParam Integer userId) {
+        return motorcycleService.findMyMotorcycle(userId);
     }
 
     @RequestMapping(value = "/createMyMotorcycle")

@@ -13,4 +13,7 @@ public interface OwnerMapper {
     List<Owner> selectAll();
 
     int updateByPrimaryKey(Owner record);
+
+    List<Owner> selectByUserId(Integer userId);
+
 }
