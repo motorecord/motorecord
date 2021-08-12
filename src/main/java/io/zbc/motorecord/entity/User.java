@@ -1,4 +1,4 @@
-package io.zbc.motorecord.model;
+package io.zbc.motorecord.entity;
 
 import java.time.LocalDateTime;
 

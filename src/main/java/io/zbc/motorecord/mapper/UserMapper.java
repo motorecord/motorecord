@@ -1,6 +1,6 @@
 package io.zbc.motorecord.mapper;
 
-import io.zbc.motorecord.model.User;
+import io.zbc.motorecord.entity.User;
 import java.util.List;
 
 public interface UserMapper {

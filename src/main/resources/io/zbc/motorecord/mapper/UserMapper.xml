@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="io.zbc.motorecord.mapper.UserMapper">
-  <resultMap id="BaseResultMap" type="io.zbc.motorecord.model.User">
+  <resultMap id="BaseResultMap" type="io.zbc.motorecord.entity.User">
     <id column="user_id" jdbcType="INTEGER" property="userId" />
     <result column="user_name" jdbcType="VARCHAR" property="userName" />
     <result column="password" jdbcType="VARCHAR" property="password" />
@@ -14,7 +14,7 @@
     delete from user
     where user_id = #{userId,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="io.zbc.motorecord.model.User">
+  <insert id="insert" parameterType="io.zbc.motorecord.entity.User">
     insert into user (user_id, user_name, password, 
       mobile, email, insert_time, 
       update_time)
@@ -22,7 +22,7 @@
       #{mobile,jdbcType=VARCHAR}, #{email,jdbcType=VARCHAR}, #{insertTime,jdbcType=TIMESTAMP}, 
       #{updateTime,jdbcType=TIMESTAMP})
   </insert>
-  <update id="updateByPrimaryKey" parameterType="io.zbc.motorecord.model.User">
+  <update id="updateByPrimaryKey" parameterType="io.zbc.motorecord.entity.User">
     update user
     set user_name = #{userName,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},

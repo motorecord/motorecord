@@ -1,4 +1,4 @@
-package io.zbc.motorecord.model;
+package io.zbc.motorecord.entity;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

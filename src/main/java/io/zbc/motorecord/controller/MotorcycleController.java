@@ -1,6 +1,6 @@
-package io.zbc.motorecord.api;
+package io.zbc.motorecord.controller;
 
-import io.zbc.motorecord.model.Motorcycle;
+import io.zbc.motorecord.entity.Motorcycle;
 import io.zbc.motorecord.service.MotorcycleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -21,7 +21,6 @@ public class MotorcycleController {
 
     @RequestMapping(value = "/createMyMotorcycle")
     public String createMyMotorcycle(@RequestBody Motorcycle motorcycle) {
-
         return null;
     }
 }

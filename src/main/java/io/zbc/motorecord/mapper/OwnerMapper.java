@@ -1,6 +1,6 @@
 package io.zbc.motorecord.mapper;
 
-import io.zbc.motorecord.model.Owner;
+import io.zbc.motorecord.entity.Owner;
 import java.util.List;
 
 public interface OwnerMapper {

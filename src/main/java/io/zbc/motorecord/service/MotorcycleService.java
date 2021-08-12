@@ -2,9 +2,8 @@ package io.zbc.motorecord.service;
 
 import io.zbc.motorecord.mapper.MotorcycleMapper;
 import io.zbc.motorecord.mapper.OwnerMapper;
-import io.zbc.motorecord.model.Motorcycle;
-import io.zbc.motorecord.model.Owner;
-import org.springframework.beans.factory.annotation.Autowired;
+import io.zbc.motorecord.entity.Motorcycle;
+import io.zbc.motorecord.entity.Owner;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 

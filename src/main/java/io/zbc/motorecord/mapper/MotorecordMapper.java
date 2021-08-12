@@ -1,6 +1,6 @@
 package io.zbc.motorecord.mapper;
 
-import io.zbc.motorecord.model.Motorecord;
+import io.zbc.motorecord.entity.Motorecord;
 import java.util.List;
 
 public interface MotorecordMapper {

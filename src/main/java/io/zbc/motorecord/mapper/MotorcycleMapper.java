@@ -1,7 +1,7 @@
 package io.zbc.motorecord.mapper;
 
-import io.zbc.motorecord.model.Motorcycle;
-import io.zbc.motorecord.model.Owner;
+import io.zbc.motorecord.entity.Motorcycle;
+import io.zbc.motorecord.entity.Owner;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
