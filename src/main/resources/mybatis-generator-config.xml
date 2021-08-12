@@ -32,8 +32,8 @@
         </javaTypeResolver>
 
         <javaModelGenerator targetPackage="io.zbc.motorecord.entity" targetProject="src/main/java"/>
-        <!--<sqlMapGenerator targetPackage="io.zbc.motorecord.mapper" targetProject="src/main/resources"/>-->
-        <!--<javaClientGenerator type="XMLMAPPER" targetPackage="io.zbc.motorecord.mapper" targetProject="src/main/java"/>-->
+        <!--<sqlMapGenerator targetPackage="io.zbc.motorecord.dao" targetProject="src/main/resources"/>-->
+        <!--<javaClientGenerator type="XMLMAPPER" targetPackage="io.zbc.motorecord.dao" targetProject="src/main/java"/>-->
 
         <table tableName="motorcycle"/>
         <table tableName="motorecord"/>

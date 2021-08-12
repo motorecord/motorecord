@@ -1,4 +1,4 @@
-package io.zbc.motorecord.mapper;
+package io.zbc.motorecord.dao;
 
 import io.zbc.motorecord.entity.Motorcycle;
 import io.zbc.motorecord.entity.Owner;
